@@ -8,6 +8,7 @@ phases:
       - echo "Installing dependencies..."
       - pip install -r requirements.txt -t ./package
       - pip install aws-sam-cli      
+      - cd cicd-pipelines
   pre_build:
     commands:
       - echo "Running sam build..."
