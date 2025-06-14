@@ -14,4 +14,8 @@ phases:
       - sam build
   build:
     commands:
-      - echo "Running our build commands..."
+      - echo "Packing sam template..."
+      - sam package --output-template-file packaged.yaml --s3-bucket andres-ocampo-bucket
+  artifacts:
+    files:
+      - packaged.yaml
